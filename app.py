@@ -120,7 +120,7 @@ st.subheader("Model Insight: Feature Importance")
 importance_df = get_feature_importances(model)
 
 if importance_df is not None:
-    st.dataframe(importance_df.head(10), use_container_width=True)
+    st.dataframe(importance_df.head(10), width="stretch")
     st.bar_chart(importance_df.head(10).set_index("feature"))
 else:
     st.warning("Feature importance is not available for this model pipeline.")
